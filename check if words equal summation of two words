@@ -1,0 +1,18 @@
+class Solution {
+public:
+    int convert(string word) {
+        string num = "";
+        for (char c : word) {
+            num += to_string(c - 'a'); 
+        }
+        return stoi(num);  
+    }
+
+    bool isSumEqual(string firstWord, string secondWord, string targetWord) {
+        int a =convert(firstWord);
+        int b =convert(secondWord);
+        int c = convert(targetWord);
+
+        return (a + b) == c;
+    }
+};
